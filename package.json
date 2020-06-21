@@ -1,0 +1,22 @@
+{
+  "name": "todo-node",
+  "version": "1.0.0",
+  "description": "ToDo application made with Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShiroKyu/ToDo-Node.git"
+  },
+  "author": "Paulo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShiroKyu/ToDo-Node/issues"
+  },
+  "homepage": "https://github.com/ShiroKyu/ToDo-Node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
