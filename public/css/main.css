@@ -30,10 +30,12 @@ header {
     margin: 20px 0;
 }
 
-header h1,
-h2,
-p {
+
+header,
+h2 {
     font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 
@@ -41,8 +43,15 @@ p {
 form {
     display: flex;
     justify-content: center;
+}
 
-    margin: 12px auto;
+#adicionarTodo {
+    margin: 40px auto;
+}
+
+.resultForm {
+
+    margin: 7.5px auto;
 }
 
 .todo-area {
@@ -75,12 +84,12 @@ button {
 }
 
 .resultTodo {
-    border-radius: 5px;
+    border-radius: 5px 0 0 5px;
     background-color: white;
 }
 
 
-.btn-click {
+.btn-submit {
     background-color: white;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -90,7 +99,7 @@ button {
     align-items: center;
 }
 
-.btn-click img {
+.btn-submit img {
     margin-right: 5px;
     padding-left: 5px;
 }
