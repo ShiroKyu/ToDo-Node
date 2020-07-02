@@ -26,7 +26,7 @@ app.use(express.urlencoded({
 //Rotas
 
 app.get('/', (req, res) => {
-    res.render('./views/index.html')
+    res.render('index.html')
 })
 
 
