@@ -1,47 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'layouts/mainLayout.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo</title>
+{% set pageId = 'page-home' %}
 
-    <link rel='stylesheet' href='css/main.css'>
-</head>
 
-<body>
+{% block styles %}
+<link rel='stylesheet' href='css/main.css'>
+{% endblock styles %}
 
-    <div id="principal">
 
-        <header>
-            <h1>ToDo list</h1>
-            <p>Made by: Paulo Sérgio</p>
-        </header>
+{% block content %}
+<div id="principal">
 
-        <form id='adicionarTodo'>
-            <input class='addtodo' type="text" placeholder="Novo ToDo">
-            <button class='btn-submit'><img src='assets/add-24px.svg' width="20"></button>
-        </form>
+    <header>
+        <h1>ToDo list</h1>
+        <p>Made by: Paulo Sérgio</p>
+    </header>
 
-        <div class='todo-area'>
-            <h2>Seus ToDos:</h2>
+    <form action='/newTodo' method='POST' id='adicionarTodo'>
+        <input name='name' class='addtodo' type="text" placeholder="Novo ToDo">
+        <button class='btn-submit'><img src='assets/add-24px.svg' width="20"></button>
+    </form>
 
-            <!-- <form action="#">
+    <div class='todo-area'>
+        <h2>Seus ToDos:</h2>
+
+        <!-- <form action="#">
                 <input class='todo' type="text" placeholder="Seu ToDo aqui">
                 <button class='btn-click'><img src='assets/restore-24px.svg' width="20"></button>
             </form>-->
-
-        </div>
-
-
 
     </div>
 
 
 
+</div>
+{% endblock content %}
 
-    <script src='js/main.js'>
-    </script>
-</body>
 
-</html>
+{% block script %}
+<script src='js/main.js'></script>
+{% endblock script %}
+
+</script>
