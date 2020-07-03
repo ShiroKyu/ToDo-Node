@@ -1,13 +1,3 @@
-let formulario = document.querySelector('form#adicionarTodo')
-
-let todoInput = document.querySelector('input.addtodo')
-let todo_area = document.querySelector('.todo-area')
-
-let aaa = document.createElement('form')
-console.log(aaa)
-
-let todo = ''
-
 // formulario.addEventListener('submit', e => {
 //     todo = todoInput.value
 

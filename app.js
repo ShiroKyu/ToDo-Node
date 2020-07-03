@@ -41,20 +41,47 @@ mongoose.connect('mongodb://localhost/toDo', {
 //Rotas
 
 app.get('/', (req, res) => {
-    res.render('index.html')
-})
-
-app.post('/newTodo', (req, res) => {
-
-    new ToDo({
-            descricao: req.body.name
-        }).save()
-        .then(() => {
-            console.log('Sucesso!')
+    ToDo.find().lean()
+        .then(todos => {
+            res.render('index.html', {
+                todos: todos
+            })
         })
         .catch(err => {
             console.log(err)
         })
+})
+
+//Criar novo ToDo
+app.post('/newTodo', (req, res) => {
+
+    new ToDo({
+            descricao: req.body.name
+        })
+        .save()
+        .then(() => {
+            console.log('Concluido')
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
+    res.redirect('/')
+})
+
+//Deletar ToDo
+app.post('/delTodo', (req, res) => {
+    console.log(req.body.todoName)
+
+    ToDo.findOneAndDelete({
+            'descricao': req.body.todoName
+        }).then(() => {
+            console.log('Apagado.')
+        })
+        .catch(err => {
+            console.log(err)
+        })
+
 
     res.redirect('/')
 })

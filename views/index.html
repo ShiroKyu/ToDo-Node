@@ -29,6 +29,17 @@
                 <button class='btn-click'><img src='assets/restore-24px.svg' width="20"></button>
             </form>-->
 
+
+
+        {% for todo in todos %}
+
+        {% include 'partials/form.html' %}
+
+        {% endfor %}
+
+
+
+
     </div>
 
 
@@ -37,8 +48,6 @@
 {% endblock content %}
 
 
-{% block script %}
+<!-- {% block script %}
 <script src='js/main.js'></script>
-{% endblock script %}
-
-</script>
+{% endblock script %} -->
