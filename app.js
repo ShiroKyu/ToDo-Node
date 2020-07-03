@@ -25,6 +25,8 @@ app.use(express.urlencoded({
 
 //MongoDB
 
+mongoose.Promise = global.Promise
+
 mongoose.connect('mongodb://localhost/toDo', {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -54,6 +56,7 @@ app.post('/newTodo', (req, res) => {
             console.log(err)
         })
 
+    res.redirect('/')
 })
 
 app.listen(3000, () => {

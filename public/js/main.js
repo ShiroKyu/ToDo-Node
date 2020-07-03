@@ -8,39 +8,39 @@ console.log(aaa)
 
 let todo = ''
 
-formulario.addEventListener('submit', e => {
-    todo = todoInput.value
+// formulario.addEventListener('submit', e => {
+//     todo = todoInput.value
 
-    e.preventDefault()
+//     e.preventDefault()
 
-    let newForm = document.createElement('form')
-    let newInput = document.createElement('input')
-    let delBtn = document.createElement('button')
+//     let newForm = document.createElement('form')
+//     let newInput = document.createElement('input')
+//     let delBtn = document.createElement('button')
 
-    newForm.classList.toggle('resultForm')
+//     newForm.classList.toggle('resultForm')
 
-    //Configurando o input
-    newInput.classList.toggle('resultTodo')
-    newInput.type = 'text'
-    newInput.value = todo
-    newInput.disabled = true
+//     //Configurando o input
+//     newInput.classList.toggle('resultTodo')
+//     newInput.type = 'text'
+//     newInput.value = todo
+//     newInput.disabled = true
 
-    //Configurando o button
-    delBtn.classList.toggle('btn-submit')
-    delBtn.type = 'button'
+//     //Configurando o button
+//     delBtn.classList.toggle('btn-submit')
+//     delBtn.type = 'button'
 
-    let trashImg = document.createElement('img')
-    trashImg.src = 'assets/trash.svg'
-    trashImg.width = '20'
+//     let trashImg = document.createElement('img')
+//     trashImg.src = 'assets/trash.svg'
+//     trashImg.width = '20'
 
-    delBtn.appendChild(trashImg)
+//     delBtn.appendChild(trashImg)
 
-    newForm.appendChild(newInput)
-    newForm.appendChild(delBtn)
-    todo_area.appendChild(newForm)
+//     newForm.appendChild(newInput)
+//     newForm.appendChild(delBtn)
+//     todo_area.appendChild(newForm)
 
-    //Configurando botão de excluir toDo
-    delBtn.addEventListener('click', e => {
-        newForm.remove()
-    })
-})
+//     //Configurando botão de excluir toDo
+//     delBtn.addEventListener('click', e => {
+//         newForm.remove()
+//     })
+// })
